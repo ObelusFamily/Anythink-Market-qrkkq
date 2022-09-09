@@ -10,4 +10,27 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+To run this app locally you need to install Docker ([frontend](https://docs.docker.com/get-docker/)
+
+1. To verify docker is ready by running the following commands in your terminal:
+```
+docker -v
+```
+```
+docker-compose -v
+```
+
+2.  from the project root directory to load Anythink's backend and frontend
+```
+docker-compose up
+```
+
+3. The backend should be running on  http://localhost:3000
+
+you can chack it on :
+[http://localhost:3000/api/ping](http://localhost:3000/api/ping) 
+
+
+4. The frontend  should be running on  http://localhost:3001
+
+you can chack it on [http://localhost:3001/register](http://localhost:3001/register) 
