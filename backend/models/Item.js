@@ -10,7 +10,7 @@ var ItemSchema = new mongoose.Schema(
     description: String,
     image: {
       type: String,
-      required: true,
+      default: 'https://via.placeholder.com/150'
     },
     favoritesCount: { type: Number, default: 0 },
     comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
