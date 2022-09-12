@@ -59,3 +59,10 @@ body {
 .user-info {
   min-width: 800px;
 }
+
+@media only screen and (max-width: 00px) {
+  .row {
+    justify-content: center;
+  }
+}
+
