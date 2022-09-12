@@ -40,6 +40,11 @@ router.get("/", auth.optional, function(req, res, next) {
   var query = {};
   var limit = 100;
   var offset = 0;
+  let title = "";
+
+  if (typeof req.query.title !== "undefined") {
+    title = req.query.title;
+  }
 
   if (typeof req.query.limit !== "undefined") {
     limit = req.query.limit;
@@ -80,7 +85,8 @@ router.get("/", auth.optional, function(req, res, next) {
         Item.count(query).exec(),
         req.payload ? User.findById(req.payload.id) : null
       ]).then(async function(results) {
-        var items = results[0];
+
+        var items = results[0].filter((item)=> JSON.stringify(item.title).toLowerCase().indexOf(title.toLowerCase()) !== -1);
         var itemsCount = results[1];
         var user = results[2];
         return res.json({
