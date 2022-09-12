@@ -27,6 +27,7 @@ body {
   background-position: top;
   background-repeat: no-repeat;
 }
+
 .page {
   margin-top: 2 * $spacer;
   margin-bottom: 2 * $spacer;
@@ -60,8 +61,16 @@ body {
   min-width: 800px;
 }
 
-@media only screen and (max-width: 00px) {
+@media only screen and (max-width: 800px) {
   .row {
     justify-content: center;
+  }
+
+  .user-info {
+    min-width: 200px;
+  }
+
+  img {
+    width: 100%;
   }
 }
